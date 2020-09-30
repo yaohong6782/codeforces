@@ -25,3 +25,37 @@ int main() {
     }
    
  }
+
+// alt answer
+//  #include <bits/stdc++.h>
+// using namespace std;
+
+// int main() {
+//     int t,a,b;
+//     cin >> t;
+//     int tempa, tempb;
+  
+//     while (t--){
+//         int ra=0,rb=0,rc=0;
+//        cin >> a;
+//        while (a != 0){
+//            tempa = a%10;
+//            ra = ra*10 + tempa;
+//            a /= 10;
+//        }
+//        cin >> b;
+//        while (b != 0){
+//            tempb = b%10;
+//            rb = rb*10 + tempb;
+//            b /= 10;
+//        }
+//        int sum = ra + rb;
+//        while (sum != 0){
+//            int tempc = sum%10;
+//             rc = rc*10 + tempc;
+//             sum/=10;
+//        }
+//     cout << rc << endl;
+//     }
+   
+//  }
