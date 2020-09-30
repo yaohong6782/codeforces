@@ -2,28 +2,22 @@
 using namespace std;
 
 int main() {
-    int t,a,b;
-    cin >> t;
-    int tempa, tempb;
-  
-    while (t--){
-        cin >> a; 
-        string aa = to_string(a);
-        reverse(aa.begin(), aa.end());
-
-        cin >> b;
-        string bb = to_string(b);
-        reverse(bb.begin(), bb.end());
-
-        int stringnum1 = stoi(aa);
-        int stringnum2 = stoi(bb);
-        int ans = stringnum1 + stringnum2;
-
-        string cc = to_string(ans);
-        reverse(cc.begin(), cc.end());
-        cout << stoi(cc) << endl;
-    }
+      
+    int n; 
+    cin >> n;
+    int arr[n][n];
    
- }
+    for (int i = 0 ; i < n; i++){
+        for (int j = 0; j < n; j++){
+            if (i == 0 || j == 0){
+                arr[i][j] = 1;
+            }
+            else {
+                arr[i][j] = arr[i-1][j] + arr[i][j-1];
+            }
+        }
+    }
+    cout << arr[n-1][n-1];
 
+}
 

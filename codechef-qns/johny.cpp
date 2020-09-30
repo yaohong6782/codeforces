@@ -1,4 +1,3 @@
-  
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -29,3 +28,5 @@ int main() {
         cout << ans+1 << endl; 
     }
  }
+
+
