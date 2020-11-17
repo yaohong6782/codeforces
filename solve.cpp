@@ -1,21 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+string bsearch(int arr[],int k){
+	int low = 0;
+	int high = 10;
+	int mid;
+	while (low <= high){
+		mid = low + (high-low)/2;
+
+		if (arr[mid] < k){
+			low = mid+1;
+		}
+		if (arr[mid] > k){
+			high = mid-1;
+		}
+		else {
+			return "YES";
+		}
+	}
+	return "NO";
+}
+
 int main() {
-    int n; 
-    cin >> n;
-    int arr[n][n];
-   
-    for (int i = 0 ; i < n; i++){
-        for (int j = 0; j < n; j++){
-            if (i == 0 || j == 0){
-                arr[i][j] = 1;
-            }
-            else {
-                arr[i][j] = arr[i-1][j] + arr[i][j-1];
-            }
-        }
-    }
-    cout << arr[n-1][n-1]; 
+
+	return 0;
 }
 
